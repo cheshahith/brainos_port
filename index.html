@@ -58,8 +58,26 @@
 
     <!-- Section 1: Hero (Full Viewport Video Background) -->
     <section class="hero-section" id="hero" aria-label="Hero Section">
-      <video autoplay muted loop playsinline class="hero-video" id="bg-video">
-        <source src="mock video/Indian_family_women_play_with_202606110924.mp4" type="video/mp4">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/images/iraivi_logo.png"
+        class="hero-video"
+        id="bg-video"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          z-index: 0;
+        "
+      >
+        <source src="/section1video/0713(1).mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="hero-overlay"></div>
