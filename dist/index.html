@@ -6,8 +6,8 @@
   <meta name="description" content="Iraivi - A premium client portfolio showcasing exclusive masterclasses, coaching, programs, and resource collections.">
   <title>Iraivi | Premium Client Portfolio</title>
   <!-- Link main module script which bundles CSS and sets up interactive JS -->
-  <script type="module" crossorigin src="/assets/index-Co7_3_72.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BenOu63R.css">
+  <script type="module" crossorigin src="/assets/index-DLL5WrFG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-YPGM3Rkh.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
     <div class="nav-container">
       <!-- Premium Text-Based Logo -->
       <a href="#hero" class="logo" id="logo-link">
-        <img src="/assets/iravi_logo_cropped-CcPyvjUZ.svg" alt="IRAIVI Logo" class="logo-image">
+        <img src="/assets/iravi_logo_transparent-Dj4H51lQ.svg" alt="IRAIVI Logo" class="logo-image">
         <span>IRAIVI</span>
       </a>
       
@@ -59,8 +59,26 @@
 
     <!-- Section 1: Hero (Full Viewport Video Background) -->
     <section class="hero-section" id="hero" aria-label="Hero Section">
-      <video autoplay muted loop playsinline class="hero-video" id="bg-video">
-        <source src="/assets/Indian_family_women_play_with_202606110924-CmVo8hWC.mp4" type="video/mp4">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/assets/iraivi_logo-BE7ZdDmH.png"
+        class="hero-video"
+        id="bg-video"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          z-index: 0;
+        "
+      >
+        <source src="/assets/0713(1)-D11gnjix.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="hero-overlay"></div>
