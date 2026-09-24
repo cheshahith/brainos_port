@@ -479,7 +479,7 @@ const init = () => {
       const interest = interestField.value;
       const userMessage = messageField.value.trim() || 'No additional message';
       
-      const message = `🌟 New Enquiry — IRAIVI
+      const message = `🌟 New Enquiry — BRAINOS
 
 👤 Name: ${name}
 📞 Phone: ${phone}
@@ -488,7 +488,7 @@ const init = () => {
 💬 Message: ${userMessage}`;
       
       const encoded = encodeURIComponent(message);
-      window.open(`https://wa.me/919840830291?text=${encoded}`, '_blank');
+      window.open(`https://wa.me/918637619427?text=${encoded}`, '_blank');
       
       whatsappForm.reset();
     });
