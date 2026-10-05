@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="100%" height="100%">
+  <rect width="320" height="100" rx="10" fill="#0F0F0F" stroke="rgba(201, 168, 76, 0.3)" stroke-width="1.5"/>
+  <g transform="translate(160, 32)">
+    <!-- Elephant Crest Icon -->
+    <path d="M-24 6 C-24 0 -18 -4 -12 -4 C-6 -4 0 2 0 6 C0 2 6 -4 12 -4 C18 -4 24 0 24 6 C20 4 16 8 16 12 C16 16 18 20 20 22 C14 20 8 14 6 8 L0 14 L-6 8 C-8 14 -14 20 -20 22 C-18 20 -16 16 -16 12 C-16 8 -20 4 -24 6 Z" fill="#C9A84C"/>
+    <!-- Typography -->
+    <text x="0" y="32" font-family="'Cinzel', 'Times New Roman', Times, serif" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">THE TIMES OF INDIA</text>
+    <text x="0" y="46" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="500" fill="#C9A84C" text-anchor="middle" letter-spacing="4">NATIONAL DAILY</text>
+  </g>
+</svg>

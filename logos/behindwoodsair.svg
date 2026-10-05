@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="100%" height="100%">
+  <rect width="240" height="120" rx="8" fill="#D30000"/>
+  <rect x="12" y="10" width="216" height="52" rx="4" fill="#FFFFFF"/>
+  <!-- BEHINDWOODS Top Box -->
+  <text x="120" y="32" font-family="'Impact', 'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#D30000" text-anchor="middle" letter-spacing="1">BEHIND</text>
+  <text x="120" y="54" font-family="'Impact', 'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#D30000" text-anchor="middle" letter-spacing="1">WOODS</text>
+  <!-- AIR Bottom -->
+  <text x="120" y="102" font-family="'Impact', 'Arial Black', sans-serif" font-size="38" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">AIR</text>
+</svg>

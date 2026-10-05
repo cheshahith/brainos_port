@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="joshBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E48A1"/>
+      <stop offset="100%" stop-color="#072A66"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="100" rx="10" fill="url(#joshBlue)"/>
+  <g transform="translate(25, 24)">
+    <!-- Josh flame / speech bubble icon -->
+    <path d="M12 28 C6 28 2 24 2 18 C2 10 10 2 20 2 C24 8 22 14 18 18 C22 16 26 12 26 8 C28 14 26 22 20 26 L22 30 L16 28 Z" fill="#F8B81B"/>
+    <!-- JOSH TALKS Typography -->
+    <text x="38" y="34" font-family="'Arial Black', 'Trebuchet MS', sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" letter-spacing="1.5">JOSH</text>
+    <text x="142" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="300" fill="#F8B81B" letter-spacing="2">TALKS</text>
+  </g>
+</svg>

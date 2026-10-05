@@ -20,6 +20,41 @@ window.onerror = function(message, source, lineno, colno, error) {
 };
 
 const init = () => {
+  // --- Hero Video Mobile & Desktop Autoplay Resilience ---
+  const heroVideo = document.getElementById('bg-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+
+    const playHeroVideo = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If browser policy or low power mode restricts autoplay, play on first user interaction
+          const unlockAutoplay = () => {
+            heroVideo.play().catch(() => {});
+            window.removeEventListener('touchstart', unlockAutoplay);
+            window.removeEventListener('scroll', unlockAutoplay);
+            window.removeEventListener('click', unlockAutoplay);
+          };
+          window.addEventListener('touchstart', unlockAutoplay, { passive: true, once: true });
+          window.addEventListener('scroll', unlockAutoplay, { passive: true, once: true });
+          window.addEventListener('click', unlockAutoplay, { passive: true, once: true });
+        });
+      }
+    };
+
+    playHeroVideo();
+
+    // Ensure playback resumes when tab / app becomes visible
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && heroVideo.paused) {
+        playHeroVideo();
+      }
+    });
+  }
+
   // --- DOM Elements ---
   const header = document.getElementById('main-header');
   const menuToggle = document.getElementById('menu-toggle');
@@ -99,6 +134,24 @@ const init = () => {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
   sections.forEach(section => observer.observe(section));
+
+  // --- Smooth Scroll Reveal Observer ---
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
 
   // --- Framework Animation & Interaction Logic ---
   const frameworkSection = document.getElementById('programs');

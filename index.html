@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Iraivi - A premium client portfolio showcasing exclusive masterclasses, coaching, programs, and resource collections.">
-  <title>Iraivi | Premium Client Portfolio</title>
+  <meta name="description" content="BRAINOS by Dr. Priya Thahir - Neuroscience-backed transformation for leaders, founders, and executives.">
+  <title>BRAINOS | Dr. Priya Thahir</title>
+  
+  <!-- Preconnect and Preload Critical Assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="/images/hero_poster.webp" type="image/webp">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+
+  <!-- Critical Stylesheet for Immediate Rendering -->
+  <link rel="stylesheet" href="/index.css">
+
   <!-- Link main module script which bundles CSS and sets up interactive JS -->
   <script type="module" src="/main.js"></script>
 </head>
@@ -13,9 +23,10 @@
   <!-- Floating Responsive Header -->
   <header class="header-nav" id="main-header">
     <div class="nav-container">
-      <!-- Premium Text-Based Logo -->
+      <!-- Premium Text & Icon Logo -->
       <a href="#hero" class="logo" id="logo-link">
-        <span>BRAINOS</span>
+        <img src="/logos/brainos_logo.png" alt="BRAINOS Logo" class="brand-logo-icon" width="38" height="38">
+        <span class="logo-text">BRAINOS</span>
       </a>
       
       <!-- Desktop Navigation Menu -->
@@ -53,7 +64,7 @@
 
   <main>
     <!-- Screen-Reader Only H1 for SEO compliance without visual impact -->
-    <h1 class="sr-only">Iraivi - Exclusive Client Portfolio and Creative Programs</h1>
+    <h1 class="sr-only">BRAINOS - Exclusive Client Portfolio and Creative Programs</h1>
 
     <!-- Section 1: Hero (Full Viewport Video Background) -->
     <section class="hero-section" id="hero" aria-label="Hero Section">
@@ -62,21 +73,14 @@
         muted
         loop
         playsinline
-        poster="/images/iraivi_logo.png"
+        webkit-playsinline
+        preload="auto"
+        poster="/images/hero_poster.webp"
         class="hero-video"
         id="bg-video"
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-          z-index: 0;
-        "
       >
-        <source src="/section1video/0713(1).mp4" type="video/mp4" />
+        <source src="/section1video/hero_video_mobile.mp4" media="(max-width: 768px)" type="video/mp4" />
+        <source src="/section1video/hero_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="hero-overlay"></div>
@@ -89,19 +93,74 @@
       </div>
       
       <!-- Premium Scroll Down Indicator -->
-      <div class="hero-scroll-indicator" id="scroll-indicator" onclick="document.getElementById('masterclass').scrollIntoView({ behavior: 'smooth' });">
+      <div class="hero-scroll-indicator" id="scroll-indicator" onclick="document.getElementById('media').scrollIntoView({ behavior: 'smooth' });">
         <span>Scroll Down</span>
         <div class="hero-scroll-line"></div>
       </div>
     </section>
 
+    <!-- Media & Press Section: As Seen On / You Can Also See Me On -->
+    <section class="media-section reveal-on-scroll" id="media" aria-label="Media Appearances and Features">
+      <div class="media-container">
+        <div class="media-header reveal-on-scroll">
+          <span class="media-badge">AS FEATURED IN &amp; RECOGNIZED BY</span>
+          <h2 class="media-title">You Can Also See Me On</h2>
+          <div class="media-gold-divider"></div>
+        </div>
+
+        <div class="media-logos-grid">
+          <div class="media-logo-card reveal-on-scroll delay-1" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/bbctamil.svg" alt="BBC News Tamil" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">BBC News Tamil</span>
+          </div>
+
+          <div class="media-logo-card reveal-on-scroll delay-2" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/behindwoodsair.svg" alt="Behindwoods Air" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">Behindwoods Air</span>
+          </div>
+
+          <div class="media-logo-card reveal-on-scroll delay-3" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/galatalogo.svg" alt="Galatta Media" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">Galatta Media</span>
+          </div>
+
+          <div class="media-logo-card reveal-on-scroll delay-4" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/joshtalks.svg" alt="Josh Talks" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">Josh Talks</span>
+          </div>
+
+          <div class="media-logo-card reveal-on-scroll delay-5" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/lifestyle.svg" alt="Lifestyle Magazine" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">Lifestyle</span>
+          </div>
+
+          <div class="media-logo-card reveal-on-scroll delay-6" tabindex="0">
+            <div class="media-logo-img-box">
+              <img src="/logos/thetimesofindia.svg" alt="The Times of India" class="media-logo-img" loading="lazy" decoding="async">
+            </div>
+            <span class="media-logo-name">The Times of India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section 2: Masterclass -->
-    <section class="masterclass-section" id="masterclass" aria-label="Masterclass Section">
+    <section class="masterclass-section reveal-on-scroll" id="masterclass" aria-label="Masterclass Section">
       <div class="masterclass-container">
         <div class="masterclass-label">LIVE MASTERCLASS</div>
         <h2 class="masterclass-heading">Your First Step to Upgrading<br>Your Operating System</h2>
         
-        <div class="offer-card">
+        <div class="offer-card reveal-on-scroll">
           <!-- Bottom glow edge -->
           <div class="offer-card-glow"></div>
           
@@ -130,7 +189,7 @@
         <!-- Left Column: Portrait Card -->
         <div class="about-left">
           <div class="about-image-card">
-            <img src="images/IMG_9412.PNG" alt="Priyathahir" class="about-portrait">
+            <img src="/images/IMG_9412.webp" alt="Priyathahir" class="about-portrait" loading="lazy" decoding="async">
           </div>
         </div>
         
@@ -477,7 +536,7 @@
         <!-- Right Column: Portrait Card -->
         <div class="coaching-right">
           <div class="coaching-image-card">
-            <img src="images/IMG_9163.PNG" alt="Coaching Session with Dr. Priya" class="coaching-portrait">
+            <img src="/images/IMG_9163.webp" alt="Coaching Session with Dr. Priya" class="coaching-portrait" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -490,7 +549,7 @@
         
         <div class="shop-hero">
           <div class="book-display-container" id="book-trigger">
-            <img src="images/bookimage.jpeg" alt="Queen by Design Book" class="book-image">
+            <img src="/images/bookimage.webp" alt="Queen by Design Book" class="book-image" loading="lazy" decoding="async">
             <div class="book-shadow"></div>
           </div>
           <div class="shop-cta">
@@ -505,7 +564,7 @@
           <button class="book-modal-close" id="book-modal-close" aria-label="Close modal">&times;</button>
           <div class="book-modal-inner">
             <div class="book-modal-image-col">
-              <img src="images/bookimage.jpeg" alt="Queen by Design" class="book-modal-image">
+              <img src="/images/bookimage.webp" alt="Queen by Design" class="book-modal-image" loading="lazy" decoding="async">
             </div>
             <div class="book-modal-text-col">
               <h3 class="book-modal-title">Queen by Design</h3>
